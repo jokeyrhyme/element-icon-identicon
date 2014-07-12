@@ -1,0 +1,27 @@
+{
+  "name": "element-icon-identicon",
+  "version": "0.0.0",
+  "authors": [
+    "\"Ron Waldon\" (@jokeyrhyme)"
+  ],
+  "description": "identicon element",
+  "moduleType": [
+    "amd",
+    "es6",
+    "globals"
+  ],
+  "keywords": [
+    "webcomponents",
+    "polymer",
+    "angularjs",
+    "identicon"
+  ],
+  "license": "BSD",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
