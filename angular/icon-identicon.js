@@ -18,5 +18,34 @@
 }(this, function (angular, identiconCanvas) {
   'use strict';
 
-  return {};
+  var module;
+
+  module = angular.module('icon-identicon', []);
+
+  module.directive('iconIdenticon', [
+    '$window',
+    function ($window) {
+      return {
+        restrict: 'E',
+        replace: false,
+        template: '<canvas height="{{size}}" width="{{size}}"></canvas>',
+        scope: {
+          size: '@',
+          code: '@'
+        },
+        link: function ($scope, el$, attrs) {
+          var canvas;
+          canvas = el$[0].querySelector('canvas');
+          $scope.$watch('size', function (result) {
+            identiconCanvas.render(canvas, $scope.code, result);
+          });
+          $scope.$watch('code', function (result) {
+            identiconCanvas.render(canvas, result, $scope.size);
+          });
+        }
+      };
+    }
+  ]);
+
+  return module;
 }));

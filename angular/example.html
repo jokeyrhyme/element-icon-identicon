@@ -4,7 +4,25 @@
   <title>Angular.JS identicon example</title>
   <meta charset="utf-8" />
 </head>
-<body>
-  
+<body ng-app="app" ng-csp="">
+  <main ng-controller="MainCtrl">
+    <icon-identicon code="{{code}}" title="{{title}}" size="{{size}}"></icon-identicon>
+  </main>
+
+  <script src="../lib/identicon-canvas.js"></script>
+  <script src="../bower_components/angular/angular.min.js"></script>
+  <script src="icon-identicon.js"></script>
+  <script>
+    var app;
+    app = angular.module('app', ['icon-identicon']);
+    app.controller('MainCtrl', [
+      '$scope', '$window',
+      function ($scope, $window) {
+        $scope.code = Math.floor((Math.random() * 2.1e9));
+        $scope.title = 'identicon';
+        $scope.size = 200;
+      }
+    ]);
+  </script>
 </body>
 </html>
