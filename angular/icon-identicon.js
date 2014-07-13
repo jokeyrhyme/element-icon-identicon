@@ -28,7 +28,7 @@
       return {
         restrict: 'E',
         replace: false,
-        template: '<canvas height="{{size}}" width="{{size}}"></canvas>',
+        template: '<canvas></canvas>',
         scope: {
           size: '@',
           code: '@'
