@@ -6,9 +6,9 @@
 </head>
 <body ng-app="app" ng-csp="">
   <icon-identicon code="abcd" title="abcd" size="200"></icon-identicon>
-  <random-identicon fn="hash"></random-identicon>
-  <random-identicon fn="guid"></random-identicon>
-  <random-identicon fn="sentence"></random-identicon>
+  <random-identicon fn="hash" size="200"></random-identicon>
+  <random-identicon fn="guid" size="200"></random-identicon>
+  <random-identicon fn="sentence" size="200"></random-identicon>
 
   <script src="../bower_components/chance/chance.js"></script>
   <script src="../bower_components/angular/angular.min.js"></script>
@@ -27,10 +27,10 @@
           replace: false,
           template: '<icon-identicon code="{{code}}" title="{{title}}" size="{{size}}"></icon-identicon>',
           scope: {
-            fn: '@'
+            fn: '@',
+            size: '@'
           },
           link: function ($scope) {
-            $scope.size = 200;
             $scope.title = $scope.fn;
             $scope.code = chance[$scope.fn]();
           }
