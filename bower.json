@@ -25,6 +25,7 @@
     "tests"
   ],
   "devDependencies": {
-    "angular": "~1.2.20"
+    "angular": "~1.2.20",
+    "chance": "~0.5.6"
   }
 }
