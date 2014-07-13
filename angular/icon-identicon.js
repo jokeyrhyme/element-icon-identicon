@@ -40,7 +40,7 @@
             identiconCanvas.render(canvas, $scope.code, result);
           });
           $scope.$watch('code', function (result) {
-            identiconCanvas.render(canvas, result, $scope.size);
+            identiconCanvas.render(canvas, identiconCanvas.fixCode(result), $scope.size);
           });
         }
       };
