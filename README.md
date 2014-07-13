@@ -10,7 +10,7 @@ I've borrowed the MIT-licensed algorithm from @donpark's [identicon project]( ht
 
 ## Custom Element Framework Compatibility
 
-- [ ] [Polymer](http://www.polymer-project.org/)
+- [x] [Polymer](http://www.polymer-project.org/)
 - [ ] [X-Tags](http://www.x-tags.org/)
 - [x] [Angular.JS](https://angularjs.org/)
 - [ ] [React](http://facebook.github.io/react/)
